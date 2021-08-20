@@ -1,0 +1,22 @@
+﻿@page
+@model TucDemo.Pages.Shared.CreateModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" class="form-control" placeholder="Name" />
+
+        <label asp-for="JerseyNumber">Jerseynumber</label>
+        <span asp-validation-for="JerseyNumber" class="text-danger"></span>
+        <input asp-for="JerseyNumber" class="form-control" placeholder="Jerseynumber" />
+        
+        <label asp-for="City">City</label>
+        <span asp-validation-for="City" class="text-danger"></span>
+        <input asp-for="City" class="form-control" placeholder="City" />
+        
+        <button type="submit" class="btn btn-light">Save new</button>
+    </div>
+</form>

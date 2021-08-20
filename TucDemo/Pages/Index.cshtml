@@ -1,0 +1,41 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nr</th>
+            <th scope="col">Name</th>
+            <th scope="col">City</th>
+            <th scope="col">Jerseynumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Player != null)
+        {
+            @foreach (var player in Model.Player)
+            {
+                <tr>
+                    <th scope="row">@player.Id</th>
+                    <td>@player.Name</td>
+                    <td>@player.City</td>
+                    <td>@player.JerseyNumber</td>
+                </tr>
+            }
+
+        }
+        else
+        {
+            <h>Empty!</h>
+        }
+
+    </tbody>
+</table>
+<button type="button" class="btn btn-primary" onclick="/Create" asp-page="/Create">Create player</button>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
