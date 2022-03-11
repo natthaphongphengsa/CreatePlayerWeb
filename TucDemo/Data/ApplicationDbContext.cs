@@ -8,11 +8,7 @@ namespace TucDemo.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        :base(options)
-        {
-            
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base(options) {}
         public DbSet<HockeyPlayer> player { get; set; }
     }
 }

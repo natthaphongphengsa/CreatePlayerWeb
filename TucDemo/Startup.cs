@@ -28,6 +28,7 @@ namespace TucDemo
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer("Server =localhost; Database = TucDemo; Trusted_Connection = True;"));
             services.AddRazorPages();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
